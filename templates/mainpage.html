@@ -93,13 +93,13 @@ section {
 
     $.ajax({
       type:'POST',
-      url:'/create',
+      url:'/save_in_db',
       data:{
         link:$('#link').val(),
         csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
       },
       success: function(data){
-        $('h2').html("www.surls.ga/"+data)
+        $('h2').html("localhost:8000/"+data)
       }
     });
   });
